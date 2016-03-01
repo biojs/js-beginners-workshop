@@ -1,3 +1,14 @@
-.answer {
-  color: red;
+body {
+    background-color: #DDD5D0;
+    color: black;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 100px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+.center {
+    text-align: center;
 }
