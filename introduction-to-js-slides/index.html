@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Anita Borg Celebration Munich - A Javascript Beginner's Workshop in Celebration of Anita Borg</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+				        <h1>Let's code together in Javascript</h1>
+					<h3>Anita Borg Celebration Munich - A Javascript Beginner's Workshop</h3>
+					<p>
+						<small><a href="http://jessicajordan.de">Jessica Jordan</a> / <a href="http://twitter.com/jjordan_dev">@jjordan_dev</a></small>
+					</p>
+				</section>
+
+				<section>
+                                  <section>
+					<h2>What is Javascript?</h2>
+					<p>
+				JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.
+					</p>
+                                  </section>
+                                  <section>
+                                    <h2>What is it used for?</h2>
+                                    <p>Dynamic interactions on any website</p>
+                                    <p>Lists, Search Fields, Google Maps, Animations and many more</p>
+                                  </section>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Using your Browser Console</h2>
+						<p>Open any page in your browser</p>
+						<p>Hit <em>F12</em> </p>
+						<p>Click on Console</p>
+						<br>
+						<a href="#" class="navigate-down">
+							<img width="900" data-src="img/devtools.jpg" alt="DevTools Screenshot">
+						</a>
+					</section>
+					<section>
+						<h2>Your first line of Code</h2>
+						<p>Share your thoughts with your console</p>
+                                                  <pre><code>console.log("Hello World!");</code></pre>
+                                                <p>Let your console tell you something about the weather!</p>
+					</section>
+					<section class="solutions">
+						<h2>Solutions</h2>
+						<p>This is how it could have looked like</p>
+                                                <pre><code>console.log("The weather in Munich is sunny today.");</code></pre>
+					</section>
+                                        <section>
+                                                <h2>Use variables to save values for later</h2>
+                                                <p>var</p>
+                                                <pre><code data-trim>var weather = "sunny";
+console.log("The weather in Munich is " + weather + " today");</code></pre>
+                                                <p>What will happen here?</p>
+                                                <pre><code>var weather = "sunny";
+console.log("The weather in Munich is " + weather + " today");
+weather = "rainy";
+console.log("The weather in Munich is " + weather + " today");</code></pre>
+                                                <p>Try it out for yourself!</p>
+                                        </section>
+                                        <section class="solutions">
+                                                <h2>Solutions</h2>
+                                                <p>This is how it could have looked like</p>
+                                                <pre><code>var weather = "sunny";
+console.log("The weather in Munich is " + weather + " today");
+// The weather in Munich is sunny today
+weather = "rainy";
+console.log("The weather in Munich is " + weather + " today");
+// The weather in Munich is rainy today</code></pre>
+                                        </section>
+				</section>
+
+				<section>
+                                  <section>
+					<h2>Loops</h2>
+					<p>
+                                        Loops help you to automate program instructions that have to be repeated 
+                                        in the same or in a similar way. Have a look at this example!</p>
+                                                <pre><code>for (var i = 0; i < 3; i += 1){
+// do something for 3 times
+}</code></pre>
+					
+                                  </section>
+                                 <section>
+                                        <h2>Print a list of numbers into your console</h2>
+                                        <p>
+                                        Print the list of numbers from 0 to 30 to your console</p>
+                                                <pre><code>for (// insert the definition for your for loop here){
+console.log(i);
+}</code></pre>
+                                        </p>
+                                  </section>
+                                 <section class="solutions">
+                                        <h2>Solutions</h2>
+                                        <p>
+                                        Print the list of numbers from 0 to 30 to your console</p>
+                                                <pre><code>for (var i = 0; i < 31; i += 1){
+console.log(i);
+}
+// 1
+// 2
+// 3 
+// ..
+// 30</code></pre>
+                                  </section>
+				</section>
+
+				<section>
+					<section><h2>Conditions</h2>
+					<p>
+						Sometimes you want to execute code only in specific situations
+					</p>
+                                                <pre><code>var weather = "sunny";
+if (weather === "sunny"){
+console.log("Let's go skating!");
+}</code></pre>
+<p>
+And sometimes you even want to have a fallback
+</p>
+<pre><code>var weather = "rainy";
+if (weather === "sunny"){
+console.log("Let's go skating!");
+}
+else {
+console.log("Let's watch a movie!");
+}
+// Let's watch a movie!</code></pre></section>
+  <section>
+    <p>Imagine how this scenario could turn out: Print either "Let's celebrate your birthday!" or "Let's celebrate
+    your non-birthday!" to the console depending on the value of the variable hasBirthday</p>
+<pre><code>var hasBirthday = true;
+// if (....</code></pre>
+<p>Extra task "FizzBuzz": Print all the numbers from 1 to 100 into your console. If the number
+is dividable by 3 print "Fizz", if it is dividable by 5 print "Buzz" and "FizzBuzz" if
+it is dividable by both numbers instead. Hint: Check for division by numbers with the 
+% operator:
+<pre><code>if (num % 3 === 0){
+// do if num is dividable by 0
+}</code></pre>
+  </section>
+  <section class="solutions">
+    <p>This is how it could have looked like:</p>
+<pre><code>var hasBirthday = true;
+if (hasBirthday === true){
+console.log("Let's celebrate your birthday!");
+}
+else {
+console.log("Let's celebrate your non-birthday!");
+}
+// Let's celebrate your birthday!</code></pre>
+  </section>
+				</section>
+
+				<section>
+                                  <section>
+					<h2>Let's Draw!</h2>
+					<p>
+                                          Check your index.html from the HTML introduction to get started
+                                          and open the file drawing.js in your working example folder.
+					</p>
+                                  </section>
+                                  <section>
+                                        <p>
+                                          This is how we draw a circle on our canvas element:
+                                        </p>
+<pre><code>
+function drawOnCanvas(circle, randomColor){
+  // drawing code here
+  //    circle(x-coordinate,y-coordinate);
+  circle(60,60);
+}
+</code></pre>
+</section>
+<section>
+                                        <p>
+                                          You can add another one next to it:
+                                        </p>
+<pre><code>
+function drawOnCanvas(circle, randomColor){
+  // drawing code here
+      circle(60,60);
+      circle(120,60);
+}
+</code></pre>
+                                  </section>
+<section>
+                                        <p>
+                                          Try creating 5 circles in a row the using one of the loops we got familiar with!
+                                        </p>
+<pre><code>
+function drawOnCanvas(circle, randomColor){
+  // drawing code here
+
+}
+</code></pre>
+                                  </section>
+<section class="solutions">
+  <h2>Solutions</h2>
+                                        <p>
+                                          Try creating 5 circles in a row using one of the loops we got familiar with!
+                                        </p>
+<pre><code>
+function drawOnCanvas(circle, randomColor){
+  // drawing code here
+    for (var i = 0; i < 4; i += 1){
+      circle(60 * i, 60);
+    }
+}
+</code></pre>
+                                  </section>
+                                  <section>
+                                        <p>
+                                          How about 5 circles in a row and 4 in a column?
+                                          Hint: You may use another counting variable as well!
+                                        </p>
+<pre><code class="hljs" data-trim contenteditable>
+function drawOnCanvas(circle, randomColor){
+  // drawing code here
+    var bgColor;
+    for (var i = 0; i < 5; i += 1){
+    // ....
+    }
+}
+</code></pre>
+                                  </section>
+                                  <section class="solutions">
+                                        <h2>Solutions</h2>
+                                        <p>
+                                          How about 5 circles in a row and 4 in a column?
+                                          Hint: You may use another counting variable as well!
+                                        </p>
+<pre><code>
+function drawOnCanvas(circle, randomColor){
+  // drawing code here
+    for (var i = 0; i < 4; i += 1){
+      for (var j = 0; j < 3; j += 1){
+      circle(60 * i,60 * j,);
+      }
+    }
+}
+</code></pre>
+                                  </section>
+                                  <section class="extras">
+                                        <h2>Extras</h2>
+                                        <p>
+                                          Color your circles!
+                                        </p>
+<pre><code>
+function drawOnCanvas(circle, randomColor){
+  // drawing code here
+    circle(60,60,"#ff00ff");
+}
+</code></pre>
+                                        <p>
+                                          Create random colors!
+                                        </p>
+<pre><code>
+function drawOnCanvas(circle, randomColor){
+  // drawing code here
+    var myRandomColor = randomColor;
+    // console.log("myRandomColor");
+    // > #f0de11
+}
+</code></pre>
+                                  </section>
+				</section>
+
+
+				<section style="text-align: left;">
+					<h1>Let's See what else you can do with Javascript and visualizations!</h1>
+					<p>
+						- <a href="http://slides.com">Visualization with D3.js</a> <br>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
