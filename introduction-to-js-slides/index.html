@@ -324,6 +324,45 @@ function drawOnCanvas(circle, randomColor){
 					</p>
 				</section>
 
+				<section>
+                                        <h1>What is <a href="https://d3js.org" target="d3">D3.js?</a></h1>
+                                        <p>
+                                      Javascript library for visualizing data using HTML, CSS and SVG
+                                        </p>
+                                </section>
+                              <section>
+                                <section>
+                                        <h1>How does the D3.js principle work?</h1>
+                                        <p>
+                                      You can easily plug D3 into your website using the code from the project site:
+                                        </p>
+<pre><code><script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</code></pre>
+                                </section>
+                                <section>
+                                        <p>
+                                      Select several page elements
+                                        </p>
+<pre><code>
+d3.selectAll("p").style("color", "white");
+</code></pre>
+                                </section>
+                                <section>
+                                        <p>
+                                      Manipulate your elements according to data
+                                        </p>
+<pre><code>
+d3.selectAll("p")
+    .data([4, 8, 15, 16, 23, 42])
+    .style("font-size", function(d) { return d + "px"; });
+</code></pre>
+                                </section>
+                                <section class="solutions">
+                                  <h1>A Live Example of D3.js</h1>
+                                  <a href="../reddit-viz/index.html" target="d3-viz">See the demo</a>
+                                </section>
+                              </section>
+
 			</div>
 
 		</div>
