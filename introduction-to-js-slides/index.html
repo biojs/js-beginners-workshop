@@ -242,7 +242,7 @@ function drawOnCanvas(circle, randomColor){
 <pre><code>
 function drawOnCanvas(circle, randomColor){
   // drawing code here
-    for (var i = 0; i < 4; i += 1){
+    for (var i = 1; i < 6; i += 1){
       circle(60 * i, 60);
     }
 }
@@ -257,7 +257,7 @@ function drawOnCanvas(circle, randomColor){
 function drawOnCanvas(circle, randomColor){
   // drawing code here
     var bgColor;
-    for (var i = 0; i < 5; i += 1){
+    for (var i = 1; i < 6; i += 1){
     // ....
     }
 }
@@ -272,8 +272,8 @@ function drawOnCanvas(circle, randomColor){
 <pre><code>
 function drawOnCanvas(circle, randomColor){
   // drawing code here
-    for (var i = 0; i < 4; i += 1){
-      for (var j = 0; j < 3; j += 1){
+    for (var i = 1; i < 6; i += 1){
+      for (var j = 1; j < 5; j += 1){
       circle(60 * i,60 * j,);
       }
     }
@@ -297,7 +297,18 @@ function drawOnCanvas(circle, randomColor){
 <pre><code>
 function drawOnCanvas(circle, randomColor){
   // drawing code here
-    var myRandomColor = randomColor;
+    var myRandomColor = randomColor();
+    // console.log("myRandomColor");
+    // > #f0de11
+}
+</code></pre>
+                                        <p>
+                                          Try to animate!
+                                        </p>
+<pre><code>
+function drawOnCanvas(circle, randomColor){
+  // drawing code here
+    var myRandomColor = randomColor();
     // console.log("myRandomColor");
     // > #f0de11
 }
@@ -309,7 +320,7 @@ function drawOnCanvas(circle, randomColor){
 				<section style="text-align: left;">
 					<h1>Let's See what else you can do with Javascript and visualizations!</h1>
 					<p>
-						- <a href="http://slides.com">Visualization with D3.js</a> <br>
+						- <a>Visualization with D3.js</a> <br>
 					</p>
 				</section>
 
