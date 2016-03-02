@@ -1,0 +1,15 @@
+body {
+  background-color: #fff;
+}
+h2 {
+  color: #90CAF9;
+}
+.chart rect {
+  fill: #ED1C24;
+}
+
+.chart text {
+  fill: #fff;
+  font: 14px sans-serif;
+  text-anchor: end;
+} 
