@@ -1,8 +1,10 @@
 (function(){
+
 var canvas = document.getElementById('my-canvas');
 var ctx = canvas.getContext('2d');
 
 function circle(x,y,color){
+
   var fillColor = "#268bd2";
   if (color !== undefined){
     fillColor = color;
