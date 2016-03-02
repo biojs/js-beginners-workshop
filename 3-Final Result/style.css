@@ -1,14 +1,22 @@
 body {
-    background-color: #DDD5D0;
-    color: black;
+    background-color: lightblue;
 }
 
 h1 {
-    font-weight: 400;
-    font-size: 100px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+    font-size: 50px;
+}
 
 .center {
     text-align: center;
+}
+
+.icon {
+    max-height: 50px;
+}
+
+#my-canvas {
+    height: 400px;
+    width: 600px;
+    background-color: white;
+    border: solid 1px black;
 }
