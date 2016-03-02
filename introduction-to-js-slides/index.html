@@ -52,14 +52,19 @@
 				<section>
                                   <section>
 					<h2>What is Javascript?</h2>
-					<p>
-				JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.
-					</p>
+					<ul>
+				<li>cross-platform, object-oriented scripting language</li> 
+				<li>small and lightweight</li>
+				<li>gain control of the elements and manipulate them</li>
+					</ul>
                                   </section>
                                   <section>
                                     <h2>What is it used for?</h2>
                                     <p>Dynamic interactions on any website</p>
                                     <p>Lists, Search Fields, Google Maps, Animations and many more</p>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2656.049165359077!2d11.66
+                            7030715653409!3d48.26342837923377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e72
+                            eda5f06ef9%3A0xcdc8612bc14f6084!2zSW50ZXJpbXNow7Zyc8OkbGU!5e0!3m2!1sde!2sus!4v1456511625252" width="400" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
                                   </section>
 				</section>
 
@@ -200,8 +205,24 @@ console.log("Let's celebrate your non-birthday!");
 					</p>
                                   </section>
                                   <section>
+                                       <p>
+                                       We want to draw on the canvas element that you already prepared in your <strong>index.html</strong> file
+                                       </p>
+<pre><code>
+<canvas id="my-canvas" width="500" height="300"></canvas>
+</code></pre>
+                                       <p>
+                                       ...which will be selected as the drawing area by the following code in <strong>functions.js</strong>
+                                       </p>
+<pre><code>
+var canvas = document.getElementById('my-canvas');
+var ctx = canvas.getContext('2d');
+</code></pre>
+</section>
+<section>
                                         <p>
-                                          This is how we draw a circle on our canvas element:
+                                          After this setup you can now use the <strong>circle()</strong> function
+                                          we prepared for you to draw on your canvas in the file <strong>drawing.js</strong>
                                         </p>
 <pre><code>
 function drawOnCanvas(circle, randomColor){
@@ -213,10 +234,10 @@ function drawOnCanvas(circle, randomColor){
 </section>
 <section>
                                         <p>
-                                          You can add another one next to it:
+                                          You can add another circle next to it:
                                         </p>
 <pre><code>
-function drawOnCanvas(circle, randomColor){
+function drawOnCanvas(circle){
   // drawing code here
       circle(60,60);
       circle(120,60);
@@ -228,7 +249,7 @@ function drawOnCanvas(circle, randomColor){
                                           Try creating 5 circles in a row the using one of the loops we got familiar with!
                                         </p>
 <pre><code>
-function drawOnCanvas(circle, randomColor){
+function drawOnCanvas(circle){
   // drawing code here
 
 }
@@ -240,7 +261,7 @@ function drawOnCanvas(circle, randomColor){
                                           Try creating 5 circles in a row using one of the loops we got familiar with!
                                         </p>
 <pre><code>
-function drawOnCanvas(circle, randomColor){
+function drawOnCanvas(circle){
   // drawing code here
     for (var i = 1; i < 6; i += 1){
       circle(60 * i, 60);
@@ -248,69 +269,30 @@ function drawOnCanvas(circle, randomColor){
 }
 </code></pre>
                                   </section>
-                                  <section>
+                                  <section class="extras">
+                                        <h2>Extras</h2>
                                         <p>
                                           How about 5 circles in a row and 4 in a column?
                                           Hint: You may use another counting variable as well!
                                         </p>
 <pre><code class="hljs" data-trim contenteditable>
-function drawOnCanvas(circle, randomColor){
+function drawOnCanvas(circle){
   // drawing code here
-    var bgColor;
     for (var i = 1; i < 6; i += 1){
     // ....
     }
 }
 </code></pre>
-                                  </section>
-                                  <section class="solutions">
-                                        <h2>Solutions</h2>
-                                        <p>
-                                          How about 5 circles in a row and 4 in a column?
-                                          Hint: You may use another counting variable as well!
-                                        </p>
-<pre><code>
-function drawOnCanvas(circle, randomColor){
-  // drawing code here
-    for (var i = 1; i < 6; i += 1){
-      for (var j = 1; j < 5; j += 1){
-      circle(60 * i,60 * j,);
-      }
-    }
-}
-</code></pre>
-                                  </section>
-                                  <section class="extras">
-                                        <h2>Extras</h2>
                                         <p>
                                           Color your circles!
                                         </p>
 <pre><code>
 function drawOnCanvas(circle, randomColor){
   // drawing code here
+  // circle function takes an optional parameter for the color
     circle(60,60,"#ff00ff");
-}
-</code></pre>
-                                        <p>
-                                          Create random colors!
-                                        </p>
-<pre><code>
-function drawOnCanvas(circle, randomColor){
-  // drawing code here
-    var myRandomColor = randomColor();
-    // console.log("myRandomColor");
-    // > #f0de11
-}
-</code></pre>
-                                        <p>
-                                          Try to animate!
-                                        </p>
-<pre><code>
-function drawOnCanvas(circle, randomColor){
-  // drawing code here
-    var myRandomColor = randomColor();
-    // console.log("myRandomColor");
-    // > #f0de11
+  // you can even create random colors
+   var myRandomColor = randomColor();
 }
 </code></pre>
                                   </section>
@@ -323,6 +305,30 @@ function drawOnCanvas(circle, randomColor){
 						- <a>Visualization with D3.js</a> <br>
 					</p>
 				</section>
+
+				<section>
+                                        <h1>What is <a href="https://d3js.org" target="d3">D3.js?</a></h1>
+                                        <p>
+                                      Javascript library for visualizing data using HTML, CSS and SVG
+                                        </p>
+                                </section>
+                              <section>
+                                <section>
+                                        <h1>How do I use D3.js on my website?</h1>
+                                        <p>
+                                      You can easily plug D3 into your website using the code from the project site:
+                                        </p>
+<pre><code><script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</code></pre>
+<p>This makes your D3.js toolbox usable for your website straight away!</p>
+<pre><code>d3.selectAll("p").style("color", "white");</script>
+</code></pre>
+                                </section>
+                                <section class="solutions">
+                                  <h1>A Live Example of D3.js</h1>
+                                  <a href="../reddit-viz/index.html">See the demo</a>
+                                </section>
+                              </section>
 
 			</div>
 
