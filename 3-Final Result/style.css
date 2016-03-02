@@ -15,8 +15,6 @@ h1 {
 }
 
 #my-canvas {
-    height: 400px;
-    width: 600px;
     background-color: white;
     border: solid 1px black;
 }
