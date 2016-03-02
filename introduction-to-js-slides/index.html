@@ -53,7 +53,8 @@
                                   <section>
 					<h2>What is Javascript?</h2>
 					<ul>
-				<li>cross-platform, object-oriented scripting language</li> 
+                                <li>language on the web</li>
+				<li>cross-platform scripting language that works in your browser (e.g. Chrome)</li> 
 				<li>small and lightweight</li>
 				<li>gain control of the elements and manipulate them</li>
 					</ul>
@@ -72,8 +73,8 @@
 				<section>
 					<section>
 						<h2>Using your Browser Console</h2>
-						<p>Open any page in your browser</p>
-						<p>Hit <em>F12</em> </p>
+						<p>Open your index.html file in the browser</p>
+						<p>Right-click on your browser window and select <strong>Inspect</strong></p>
 						<p>Click on Console</p>
 						<br>
 						<a href="#" class="navigate-down">
@@ -171,17 +172,10 @@ console.log("Let's watch a movie!");
 }
 // Let's watch a movie!</code></pre></section>
   <section>
-    <p>Imagine how this scenario could turn out: Print either "Let's celebrate your birthday!" or "Let's celebrate
-    your non-birthday!" to the console depending on the value of the variable hasBirthday</p>
+    <p>Imagine how this scenario could turn out: Print either "Let's celebrate your birthday!" or "Let's not celebrate
+    your birthday!" to the console depending on the value of the variable hasBirthday</p>
 <pre><code>var hasBirthday = true;
 // if (....</code></pre>
-<p>Extra task "FizzBuzz": Print all the numbers from 1 to 100 into your console. If the number
-is dividable by 3 print "Fizz", if it is dividable by 5 print "Buzz" and "FizzBuzz" if
-it is dividable by both numbers instead. Hint: Check for division by numbers with the 
-% operator:
-<pre><code>if (num % 3 === 0){
-// do if num is dividable by 0
-}</code></pre>
   </section>
   <section class="solutions">
     <p>This is how it could have looked like:</p>
@@ -190,10 +184,89 @@ if (hasBirthday === true){
 console.log("Let's celebrate your birthday!");
 }
 else {
-console.log("Let's celebrate your non-birthday!");
+console.log("Let's not celebrate your birthday!");
 }
 // Let's celebrate your birthday!</code></pre>
   </section>
+<section class="extras">
+<h2>Extras</h2>
+<p>Extra task "FizzBuzz": Print all the numbers from 1 to 100 into your console. If the number
+is dividable by 3 print "Fizz", if it is dividable by 5 print "Buzz" and "FizzBuzz" if
+it is dividable by both numbers instead. Hint: Check for division by numbers with the 
+% operator:</p>
+<pre><code>if (num % 3 === 0){
+// do if num is dividable by 0
+}</code></pre>
+</section>
+				</section>
+				<section>
+                                  <section>
+                                  <h2>Functions</h2>
+<p>Help you to seperate program instructions into seperate bits</p>
+<pre><code>function myFunction {
+// Your instructions go here
+}</code></pre>
+<p>You can then execute them anytime in your program by calling the name of your function</p>
+<pre><code>myFunction();</code></pre>
+                                </section>
+                                  <section>
+                                  <h2>Functions produce values</h2>
+<p>You can use the <strong>return value</strong> of functions to set new variables</p>
+<pre><code>function myFunction (){
+  return 3;
+}
+var number = myFunction();
+console.log(number); // -> 3 </code></pre>
+                                </section>
+                                  <section>
+                                  <h2>Functions accept parameters</h2>
+<p>You can provide values called <strong>parameters</strong> to your function and interact with those</p>
+<pre><code>
+function doubleMe (paramNumber) {
+  return paramNumber * 2;
+}
+</code></pre>
+<p>And later on use this with different values which you put in</p>
+<pre><code>
+var myNumber = 3;
+var myDoubledNumber = doubleMe(myNumber);
+console.log(myDoubledNumber); // -> 6 </code></pre>
+                                </section>
+                                  <section>
+                                        <h2>Exercise</h2>
+                                        <p>
+                                   Write a function called <strong>multiplicate()</strong>that returns
+                                   the result of the multiplication of two input parameters! Hint: You can
+                                   seperate several parameters by comma
+<pre><code>
+function multiplicate(a,b){
+  return  //....
+}
+</code></pre>
+                                        </p>
+                                  </section>
+                                  <section class="solutions">
+                                        <h2>Solutions</h2>
+                                        <p>
+                                 You can create the function with two input parameters</p>
+<pre><code>
+function multiplicate(a,b){
+  return  a * b;
+}
+</code></pre>
+<p>You can use this function now to create results for any multiplication
+                                        </p>
+<pre><code>
+function multiplicate(a,b){
+  return  a * b;
+}
+var firstNum = 3;
+var secondNum = 4;
+var product = multiplicate(firstNum, secondNum);
+console.log(product); // -> 12
+</code></pre>
+                                  </section>
+				
 				</section>
 
 				<section>
@@ -326,7 +399,8 @@ function drawOnCanvas(circle, randomColor){
                                 </section>
                                 <section class="solutions">
                                   <h1>A Live Example of D3.js</h1>
-                                  <a href="../reddit-viz/index.html">See the demo</a>
+                                  <p><a href="../reddit-viz/index.html">See the chart demo</a></p>
+                                  <a href="https://d3js.org">See more examples of D3.js</a>
                                 </section>
                               </section>
 
