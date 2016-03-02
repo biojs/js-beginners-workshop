@@ -1,0 +1,38 @@
+Javascript Slides CheatSheet
+
+##Loops
+//Print all the numbers from 0 to 30
+
+for (var i = 0; i < 31; i += 1){
+  console.log(i);
+}
+
+##Conditions
+
+// Print Birthday greetings
+
+var hasBirthday = true;
+if (hasBirthday === true){
+  console.log("Let's celebrate your birthday!");
+}
+else {
+  console.log("Let's not celebrate your birthday!");
+}
+
+## Functions
+//Create a Function multiplier function
+
+function multiplicate(a,b){
+  return  a * b;
+}
+
+## Canvas
+
+// Draw 5 circles
+
+function drawOnCanvas(circle){
+  // drawing code here
+    for (var i = 1; i < 6; i += 1){
+      circle(60 * i, 60);
+    }
+}
